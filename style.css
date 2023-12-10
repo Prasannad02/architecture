@@ -1,0 +1,422 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #fff;
+    height: 130px;
+    padding-bottom: 50px;
+    color: #DC143C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+    max-width: 250px; /* Adjust the width of the logo as needed */
+    height: auto;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation links to the right */
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 80px;
+    padding-bottom: 50px;
+}
+
+nav ul li a {
+    color: #DC143C;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #34efdf;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+nav ul li a:hover {
+    color: grey;
+}
+
+main {
+    padding-top: 40px;/* Adjust according to header height */
+}
+
+.section {
+    padding: 0;
+    text-align: center;
+}
+
+#services {
+    margin-top: 30px; /* Adjust the top margin to move it down */
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#myVideo {
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    border-radius: 10px; /* Example border radius for the video */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+.content {
+    max-width: 800px;
+    margin: 0;
+}
+
+h1, h2{
+    color: #333;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+span{
+    color: #DC143C;
+}
+.section .content h1 {
+    margin: 0 0 0 0;
+    text-align: left; 
+    padding-left: 20px;
+    font-size: 50px;
+}
+
+.button {
+    padding: 15px 30px;
+    background-color:#DC143C;
+    color: #fff;
+    border: 1px solid #DC143C;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Add box-shadow to transition */
+    margin-top: 50px;
+}
+
+.button:hover {
+    background-color: #DC143C;
+    color: #fff;
+    border-color: #DC143C;
+    box-shadow: 0px 4px 8px rgba(220, 20, 60, 0.6); 
+}
+.button:active {
+    box-shadow: 0px 2px 4px rgba(220, 20, 60, 0.6); /* Add shadow when clicked */
+}
+.woodmart-theme {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 100px;
+}
+.woodmart-theme h1 {
+    text-align: center;
+    font-size: 36px;
+}
+  
+.woodmart-theme .features img {
+    display: flex;
+    margin: 0 auto;
+}
+.woodmart-theme .features .item h1{
+    color: #DC143C;
+    font-size: 70px;
+}
+.woodmart-theme .features .item p{
+    font-weight: bold;
+}
+.woodmart-theme .features .item h1 p{
+    padding-bottom: 300px;
+}
+.woodmart-theme .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Align items horizontally */
+    gap: 40px;
+}
+.woodmart-theme .speed {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Adjust the gap size as needed */
+  }
+.woodmart-theme .features > div {
+    flex-basis: calc(20% - 40px); /* Adjust the width of each item */
+    text-align: center; /* Space between rows */
+}
+  
+.woodmart-theme .features h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+  
+.woodmart-theme .features p {
+    font-size: 22px;
+    line-height: 18px;
+}
+
+.woodmart-theme .ribbon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+.woodmart-theme .confidence{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+.woodmart-theme .menu{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+.woodmart-theme .proto{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+.woodmart-theme .support{
+    width: 150px;
+    height: 100px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+.woodmart-theme .features h3 a{
+    color: #DC143C;
+    font-size: 20px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #DC143C;
+    border-radius: 10px;   
+}
+form h3{
+    text-align: center;
+    color: #555;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+form button{
+    padding: 15px;
+    background: #DC143C;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+form button:hover {
+    background-color: #DC143C;
+    color: #fff;
+    border-color: #DC143C;
+    box-shadow: 0px 4px 8px rgba(220, 20, 60, 0.6); 
+}
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    color: #DC143C;
+}
+.header h1{
+    color: #DC143C;
+}
+.Container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+.about-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px; /* Add some space between sections */
+}
+
+.Content {
+    flex: 1;
+    text-align: left;
+    /* Align text content to the left in second section */
+}
+  
+.Container h2{
+    color: #DC143C;
+    font-size: 30px;
+}
+.image, 
+.Image{
+    flex: 1;
+}
+
+.image img,.Image img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.image img:hover,
+.Image img:hover {
+  transform: scale(1.1); /* Scale the image on hover */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  filter: grayscale(100%); /* Apply grayscale effect on hover */
+  background-color: #ccc;
+}
+.Container p{
+    font-weight: 800;
+    color: #333;
+    line-height: 1.6;
+}
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px; /* Adding padding to prevent boxes from touching margins */
+    box-sizing: border-box;
+    max-width: 1200px; /* Limit container width if needed */
+    margin: 0 auto;
+}
+
+/* CSS for the project boxes */
+.project-box {
+    width: calc(25% - 20px); /* 20% width for each box with some space between */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    overflow: hidden;
+}
+.project-box:hover {
+    transform: scale(1.05); /* Scale the box slightly on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+}
+.project-box:hover img {
+    filter: grayscale(100%);
+}
+.project-box img {
+    max-width: 100%;/* Adjust image size according to your design */
+    height: auto; 
+    display: block;
+    margin: 0 auto 15px;
+    transition: filter 0.3s ease;
+}
+
+.project-box h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limit the number of lines */
+    -webkit-box-orient: vertical;
+    max-height: 1.2em;
+}
+
+.project-box a {
+    text-decoration: none;
+    color: #DC143C;
+}
+footer {
+    background-color: #d8d3d3;
+    color: #DC143C;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 14px;
+}
+.responsive-video {
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .woodmart-theme .features > div {
+      flex: 0 0 100%; /* On smaller screens, display items in one column */
+    }
+  }
+

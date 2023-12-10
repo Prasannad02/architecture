@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .project-details {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project-details img {
+            display: block;
+            margin: 0 auto; /* Adjust the margin as needed */
+            width: 100%; /* Adjust image size as needed */
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px; /* Rounded border */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #DC143C;
+        }
+        .project-details h1 {
+            color: #333;
+            font-size: 24px; /* Adjust title font size */
+            margin-top: 20px; /* Adjust spacing */
+        }
+
+        .project-details p {
+            padding: 0 20px;
+            font-size: 16px; /* Adjust description font size */
+        }
+    </style>
+</head>
+<body>
+    <h2>PROJECT DETAILS</h2>
+
+    <div class="project-details">
+        <!-- Project details will be dynamically added here -->
+        <img src="" alt="Project Image" id="projectImage">
+        <h1 id="projectTitle"></h1>
+        <p id="projectDescription"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Retrieve project number from the URL parameter
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const projectId = urlParams.get('project');
+
+            // Example data (replace this with your actual project details)
+            const projectDetails = [
+                { image: 'images/project1.jfif', title: 'Ganesan', description: '"DesignScrape" is an architectural interior design project dedicated to creating contemporary living spaces that seamlessly fuse elegance with functionality. Embracing a minimalist aesthetic, the project harmonizes sleek lines, ambient lighting, and carefully curated furnishings to craft serene and sophisticated rooms. Muted color palettes, organic elements, and smart technology integration define these spaces, offering a modern yet timeless atmosphere that redefines comfortable and stylish living.' },
+                { image: 'images/project2.jfif', title: 'Manish', description: "'This condensed description encapsulates the essence of the architecture house interior design project, highlighting its emphasis on contemporary elegance, minimalism, and the integration of modern amenities. Adjust and elaborate on specific details as needed to align with the project's unique features and design elements." },
+                { image: 'images/project3.avif', title: 'Gopal', description: '"A modern urban oasis meticulously designed to harmonize city living with natural tranquility. This apartment complex features lush rooftop gardens, spacious balconies, and sustainable design elements, offering residents an escape amidst the bustling cityscape."' },
+                { image: 'images/project4.jpg', title: 'Kumar', description: '"A stunning coastal retreat that blends minimalist architecture with panoramic sea views. Featuring floor-to-ceiling windows, clean lines, and an open floor plan, this residence embodies serenity and sophistication while embracing the natural beauty of its surroundings.' },
+                { image: 'images/project5.jpg', title: 'Sivabala', description: '"An innovative workspace hub designed to inspire creativity and collaboration. This cutting-edge office space incorporates flexible layouts, vibrant communal areas, and state-of-the-art technology to foster a dynamic and productive work environment.' },
+                { image: 'images/project6.jpg', title: 'Prasanna', description: '"A vibrant cultural center and art gallery celebrating local heritage and contemporary artistry. The design seamlessly integrates galleries, event spaces, and interactive installations, inviting visitors to immerse themselves in a rich tapestry of cultural experiences.' },
+                { image: 'images/project7.jfif', title: 'Thowfic', description: '"An eco-friendly village that redefines sustainable living. Featuring energy-efficient homes, communal gardens, and shared spaces, this community prioritizes environmental stewardship while fostering a close-knit, eco-conscious lifestyle.' },
+                { image: 'images/project8.jpg', title: 'Teena', description: '"A meticulously restored historic landmark repurposed for modern use. This project blends heritage preservation with contemporary functionality, breathing new life into a cherished architectural gem.' },
+                // Add details for other projects here...
+            ];
+
+            // Find the project details based on the project number
+            const project = projectDetails[projectId - 1]; // Adjust the array index
+
+            // Display project details on the page
+            if (project) {
+                document.getElementById('projectImage').src = project.image;
+                document.getElementById('projectTitle').textContent = project.title;
+                document.getElementById('projectDescription').textContent = project.description;
+            }
+        });
+    </script>
+</body>
+</html>
